@@ -5,7 +5,8 @@
 }
 
 a{
-    color: blue;
+    color:  rgb(15, 20, 25);
+    text-decoration: none;
 }
 
 .no-bullet{
@@ -17,8 +18,66 @@ a{
     margin-left: 1.5rem; 
 }
 
+aside ul{
+    font-size: 1.2rem;
+}
+
+aside ul li{
+    padding: .5rem 1rem;
+    border-radius: .75rem;
+}
+
+aside ul li{
+    padding: .5rem 1rem;
+}
+
+aside ul li:hover{
+    background-color: rgba(15, 25, 20, 0.1);
+}
+
+header .user-photo{
+    width: 64px;
+    height: 64px;
+}
+
+header .header-info{
+    display: flex;
+}
+
+header .user-info{
+    color: rgb(83, 100, 113);
+}
+
+header .estatistics{
+    display: flex;
+    gap: .5rem;
+    color: rgb(83,100,113);
+}
+
+header .estatistics strong{
+    color: rgb(15,20,25);
+}
+
+header .estatistics li:hover{
+    text-decoration: underline;
+}
+
 main{
     margin-top: 1rem;
+}
+
+.main .publications li{
+    color: rgb(83,100,113);
+
+    border-radius: .75rem;
+}
+
+main .publications li a{
+    color: rgb(83,100,113);
+}
+
+main .publications li:hover{
+    background-color: rgba(15, 25, 20, 0.1);
 }
 
 .main-header ul{
@@ -34,8 +93,47 @@ main{
 }
 
 /* POST */
+.post{
+    padding: .25rem .5rem;
+}
+
+.post:hover{
+    background-color: rgba(0, 0, 0, 0.03);
+}
+
+.post-header .user-name{
+    color: rgb(15, 20, 25);
+}
+
+.post-header .user-nickname, .post-header .post-data{
+    color: rgb(83, 100, 113);
+}
 
 .post-links{
     display: flex;
     gap: .75rem;
+}
+
+.post-links li a{
+    color: rgb(83, 100, 113);
+}
+
+.post-links li{
+    color: rgb(83, 100, 113);
+    border-radius: .75rem;
+}
+
+.post-links .reply-content a:hover, .post-links .share-content a:hover{
+    background-color: rgba(29, 155, 240, 0.1);
+    color: rgba(29, 155, 240, 1);
+}
+
+.post-links .retzeet-content a:hover{
+    background-color: rgba(0, 186, 124, 0.1) ;
+    color:  rgba(0, 186, 124, 1);
+}
+
+.post-links .like-content a:hover{
+    background-color: rgba(249, 24, 128, 0.1);
+    color: rgba(249, 24, 128, 1);
 }
