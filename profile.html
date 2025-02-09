@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="page">
@@ -14,7 +17,7 @@
             <ul class="no-bullet">
                 <li>
                     <i class="fa fa-home"></i>
-                    <a href="#" class="only-desktop">Home</a>
+                    <a href="home.html" class="only-desktop">Home</a>
                 </li>
                 <li>
                     <i class="fa fa-hashtag"></i>
@@ -30,7 +33,7 @@
                 </li>
                 <li>
                     <i class="fa fa-user"></i>
-                    <a href="#" class="only-desktop">Profile</a>
+                    <a href="profile.html" class="only-desktop">Profile</a>
                 </li>
                 <li>
                     <i class="fa fa-ellipsis-h"></i>
@@ -38,7 +41,7 @@
                 </li>
                 <div class="tweet-button-content">
                     <button class="blue-button">
-                        <span class="only-desktop">Tweet</span>
+                        <span class="only-desktop" id="button-new-tweet">Tweet</span>
                         <span class="only-mobile">
                             <i class="fa fa-comment-o" aria-hidden="true"></i>
                         </span>
@@ -58,7 +61,7 @@
                         </div>
                     </div>
                     <div>
-                        <button>Edit Profile</button> 
+                        <button class="blue-button">Edit Profile</button> 
                     </div>
                 </div>
                 <p class="bio">Andorid Engineer - Adjunct Professor and Researcher in Mobile Development @ Federal University of Ceará</p>
@@ -214,5 +217,60 @@
             </form>
         </aside>
     </div>
+    <dialog>
+        <button class="x-close-button">X</button>
+        <div class="form-tzeet">
+            <div>
+                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135768.png" class="user-photo" alt="Foto de Perfil">
+            </div>
+            <form>
+                <textarea name="" id="tzeet-input" placeholder="O que você está pensando?" oninput="updateCounter()"></textarea>
+
+                <div>
+                    <div class="form-icons-content">
+                        <div class="form-icon">
+                            <i class="fa fa-image"></i>
+                        </div>
+                        <div class="form-icon">
+                            <i class="fa fa-file-o"></i>
+                        </div>
+                        <div class="form-icon">
+                            <i class="fa fa-smile-o "></i>
+                        </div>
+                        <div class="form-icon">
+                            <i class="fa fa-signal"></i>
+                        </div>
+                        <div class="form-icon">
+                            <i class="fa fa-calendar"></i>
+                        </div>
+                        <div class="form-icon">
+                            <i class="fa fa-map-marker"></i>
+                        </div>
+                    </div>
+                    <div class="form-events-content">
+                        <div class="reply">
+                            <span><i class="fa fa-globe"></i> Everyone can reply</span>
+                        </div>
+                        <div class="form-info-content">
+                            <div class="status-envio">
+                                <span id="char-counter">0</span>
+                            </div>
+                            <div class="separator">
+
+                            </div>
+                            <div class="form-icon">
+                                <i class="fa fa-plus-circle" id="add-tzeet"></i>
+                            </div>
+                            <button class="blue-button" id="send-button" disabled>
+                                Enviar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </dialog>
+    <script src="script.js"></script>
+    <script src="home.js"></script>
 </body> 
 </html>

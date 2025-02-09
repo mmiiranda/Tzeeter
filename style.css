@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: "Roboto", serif;
 }
 
 .only-mobile{
@@ -41,6 +42,8 @@ a{
     font-weight: bold;
 
     font-size: 18px;
+
+    cursor: pointer;
 }   
 
 .no-bullet{
@@ -52,9 +55,36 @@ a{
     margin-left: 1.5rem; 
 }
 
+.x-close-button{
+    background-color: transparent;
+    border: none;
+    border-radius: 100%;
+    text-align: center;
+    color: #868686;
+    font-size: 1.1rem;
+
+    cursor: pointer;
+}
+
+.x-close-button:hover{
+    color: #616060;
+}
+
+.separator{
+    height: 80%;
+    width: 2px;
+
+    background-color: #c4d2d9;
+}
+
 .page{
     display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+
+    gap: 8px;
     padding: 8px;
+
 }
 
 aside ul{
@@ -125,7 +155,7 @@ aside ul li:hover{
     border-radius: 100%;
 }
 
-header .user-photo{
+.user-photo{
     width: 64px;
     height: 64px;
 }
@@ -249,6 +279,122 @@ main .publications li:hover{
 .post-links .like-content a:hover{
     background-color: rgba(249, 24, 128, 0.1);
     color: rgba(249, 24, 128, 1);
+}
+
+
+/* FORM TZEET */
+.form-tzeet{
+    display: flex;
+}
+
+.form-tzeet img{
+    size: 64px;
+}
+
+.form-tzeet form{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    width: 100%;
+}
+
+.form-tzeet form textarea{
+    width: 100%;
+    font-size: 1.1rem;
+
+    padding: .5rem;
+    
+    resize: none;
+    outline: none;
+    border: none;
+}
+
+.form-tzeet form .form-icons-content{
+    display: flex;
+
+    gap: .5rem;
+}
+
+.form-tzeet form  .form-icon{
+    cursor: pointer;
+    padding: .25rem;
+}
+
+.form-tzeet form  .form-icon:hover{
+    background-color: rgb(29, 155, 240, 0.1);
+    border-radius: 1rem; 
+}
+
+.form-tzeet form .form-events-content{
+    border: solid #ebedef;
+    border-left: 2px;
+    border-right: 2px;
+    border-bottom: 0;
+    padding: 4px 0;
+}
+
+.form-tzeet form .form-events-content .form-info-content{
+    display: flex;
+    gap: .8rem;
+
+    align-items: center;
+}
+
+.form-tzeet form .reply{
+    display: flex;
+
+    align-items: center;
+
+    font-weight: bold;
+    font-size: .9rem;
+    color: rgb(17, 103, 248);
+
+    cursor: pointer;
+}
+
+.form-tzeet form .reply:hover{
+    background-color: rgb(29, 155, 240, 0.1);
+    border-radius: 1rem; 
+}
+
+.form-tzeet form .form-events-content{
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-tzeet form .form-events-content button{
+    padding: .25rem .65rem;
+    border-radius: 1rem;
+}
+
+.form-tzeet form .form-events-content button:disabled{
+    opacity: .5;
+}
+
+/* MODAL TZEET */
+::backdrop {
+    background: black;    
+    opacity: 0.5;
+
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    place-items: center;
+}
+
+dialog {
+    width: 50%;
+    padding: 20px;
+    max-width: 600px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 
